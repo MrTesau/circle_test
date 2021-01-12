@@ -61,7 +61,7 @@ const SlidersComponent = (props) => {
         max={100}
         onChange={radiusChange}
       />
-      <div>Change Indicator Numbers</div>
+      <div>Change Number of Indicators</div>
 
       <Slider
         value={data.length}
