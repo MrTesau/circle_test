@@ -1,38 +1,150 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  width: 100vw;
+  height: auto;
+  min-height: 120vh;
+  background-color: #226b9c; /* For browsers that do not support gradients */
+  background-image: linear-gradient(
+    to right,
+    #216f9c,
+    #24749e,
+    #3e87b4,
+    #327fad,
+    #24749e,
+    #24749e,
+    #226b9c
+  );
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.circle {
+  width: 15rem;
+  height: 15rem;
+  background: rgba(132, 171, 190, 0.9);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0.25em 0.25em 0.75em rgba(33, 85, 132, 0.9),
+    0.125em 0.125em 0.95em rgba(33, 85, 132, 0.9);
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.circle-indicators {
+  width: 13rem;
+  height: 13rem;
+  border: 2px solid black;
+
+  border-radius: 50%;
+  position: absolute;
+  top: 1rem;
 }
+
+.circle-inner {
+  width: 11rem;
+  height: 11rem;
+  background: rgba(42, 118, 162, 0.9);
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle-inner-segmented {
+  width: 10rem;
+  height: 10rem;
+  background: rgba(100, 155, 187, 0.9);
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.svg-arrow {
+  position: absolute;
+  top: 6.5rem;
+  left: 6.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.svg-magnifier {
+  position: absolute;
+  top: 6.8rem;
+  left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.circle-center {
+  width: 4rem;
+  height: 4rem;
+  background: rgba(42, 118, 162, 1);
+  border-radius: 50%;
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+}
+
+.inner-horizontal-divider {
+  width: 10rem;
+  height: 0.25rem;
+  background: rgba(42, 118, 162, 1);
+  position: absolute;
+  top: 5rem;
+}
+.inner-vertical-divider {
+  width: 0.25rem;
+  height: 5rem;
+  background: rgba(42, 118, 162, 1);
+  position: absolute;
+  left: 5rem;
+  top: 5rem;
+}
+p {
+  font-family: "Amatic SC", cursive;
+  font-size: 0.75rem;
+  color: antiquewhite;
+  text-align: center;
+  position: absolute;
+  left: 5rem;
+  top: 1rem;
+  -webkit-transform: translate(-50%, calc(-50% -1rem));
+  -ms-transform: translate(-50%, calc(-50% - 1rem));
+  transform: translate(-50%, calc(-50% - 1rem));
+}
+p span {
+  position: absolute;
+}
+
+/*
+.half-circle-inner {
+  width: 5rem;
+  height: 10rem;
+  background: rgba(100, 155, 187, 0.9); 
+  border-bottom-right-radius: 5rem;
+  border-top-right-radius: 5rem;
+  transform: rotate(270deg);
+  position: absolute;
+  top: -2rem;
+  left: 3rem;
+}
+
+.half-circle-inner-bottom {
+  width: 5rem;
+  height: 10rem;
+  background: rgba(100, 155, 187, 0.9); 
+  border-bottom-right-radius: 5rem;
+  border-top-right-radius: 5rem;
+  transform: rotate(90deg);
+  position: absolute;
+  bottom: -2rem;
+  left: 3rem;
+}
+*/
