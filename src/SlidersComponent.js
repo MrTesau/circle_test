@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "@material-ui/core/Slider";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
@@ -25,7 +25,7 @@ const useStyles = makeStyles({
 
 const SlidersComponent = (props) => {
   const classes = useStyles();
-  const [name, setName] = useState({});
+  const [name, setName] = useState("");
   const { arc, setArc, radius, setRadius, setText, data, setData } = props;
   const arcChange = (event, newValue) => {
     setArc(newValue);
@@ -34,10 +34,7 @@ const SlidersComponent = (props) => {
     setRadius(newValue);
   };
   const handleChange = (e) => {
-    setName({ [e.target.name]: e.target.value });
-    if (name.name) {
-      setText(name.name);
-    }
+    setName(e.target.value);
   };
   const indicatorChange = (event, newValue) => {
     let dataObj = data[0];
@@ -49,6 +46,11 @@ const SlidersComponent = (props) => {
     }
     setData(newData);
   };
+  useEffect(() => {
+    if (name.length) {
+      setText(name);
+    }
+  }, [name, setText]);
   return (
     <div className={classes.root}>
       <div>Change Name Arc</div>
