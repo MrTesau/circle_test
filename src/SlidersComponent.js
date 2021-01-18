@@ -3,7 +3,7 @@ import Slider from "@material-ui/core/Slider";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-const mockData = [["on", "off", "on", "off", "on", "off", "on", "off"]];
+const mockData = ["off", "on", "broken", "on", "on", "on", "broken", "off"];
 const useStyles = makeStyles({
   root: {
     width: 200,

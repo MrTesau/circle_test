@@ -7,8 +7,6 @@ import IndicatorComponent from "./IndicatorComponent";
 import "./App.css";
 
 const CircleComponent = (props) => {
-  const [color, setColor] = React.useState("black");
-
   const { text, arc, radius, data, setData } = props;
 
   return (
@@ -33,37 +31,3 @@ const CircleComponent = (props) => {
 };
 
 export default CircleComponent;
-
-/*
-    {/*
-        <circle
-          r="5"
-          cx="10"
-          cy="10"
-          fill="red"
-          stroke={color}
-          strokeWidth="1"
-          // size, gap
-          strokeDasharray="1 31.42"
-          //  size = circumference / number of indicators
-          transform="rotate(-90) translate(-20)"
-          // Add a mask circle over at the end to allow only click on borders
-          onClick={() => setColor("red")}
-        />
-
-        <circle
-          // dash offset = gaps and multiple circles
-          r="5"
-          cx="10"
-          cy="10"
-          fill="red"
-          stroke="black"
-          strokeWidth="1"
-          // size, gap
-          strokeDasharray="1 31.42"
-          //  size = circumference / number of indicators
-          transform="rotate(-90) translate(-30)"
-        />
-       
-
-        */

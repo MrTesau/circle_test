@@ -1,7 +1,7 @@
 .container {
   width: 100vw;
   height: auto;
-  min-height: 120vh;
+  min-height: 100vh;
   background-color: #226b9c;
   background-image: linear-gradient(
     to right,
@@ -17,19 +17,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 1rem 0 1rem 0;
 }
-
-.indicators svg {
-  /*border: 2px solid black;*/
-  width: 20rem;
-  height: 20rem;
-}
-
 .circle {
   width: 14.75rem;
   height: 14.75rem;
   background: rgba(132, 171, 190, 1);
-  /*background-image: linear-gradient(to right, transparent 50%, #655 0);*/
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -38,17 +31,6 @@
     0.125em 0.125em 0.95em rgba(33, 85, 132, 0.9);
   position: relative;
 }
-
-.circle-indicators {
-  width: 13rem;
-  height: 13rem;
-  border: 2px solid black;
-
-  border-radius: 50%;
-  position: absolute;
-  top: 1rem;
-}
-
 .circle-inner {
   width: 11rem;
   height: 11rem;
@@ -98,7 +80,6 @@
   top: 3rem;
   left: 3rem;
 }
-
 .inner-horizontal-divider {
   width: 10rem;
   height: 0.36rem;
@@ -129,31 +110,3 @@ p {
 p span {
   position: absolute;
 }
-.svg-indicator {
-  position: relative;
-}
-
-/*
-.circle::before {
-  content: "";
-  margin-left: 50%;
-  height: 15rem;
-  width: 15rem;
-  border-radius: 0 100% 100% 0 / 50%;
-  background-color: inherit;
-  transform-origin: left;
-  transform: rotate(0.5turn);
-  display: block;
-}
-.circle-inner-mask {
-  width: 13rem;
-  height: 13rem;
-  background: rgba(132, 171, 190, 1);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 1rem;
-}
-*/

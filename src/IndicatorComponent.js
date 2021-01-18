@@ -1,4 +1,3 @@
-import React from "react";
 import x from "./assets/x.png";
 
 const IndicatorComponent = (props) => {
@@ -7,10 +6,10 @@ const IndicatorComponent = (props) => {
 
   const FindMiddleAngle = (i) => {
     let offset = i === 0 ? 24.7 : 100 - indicatorLength * i + 24.7 - i * 0.6;
-    let realOffset = offset / 25; // static -> use dynamic offset later
+    let realOffset = offset / 25;
     //const angle = (this.dataPercentage(dataVal) * 360) / 2 + angleOffset
     let offsetAngleDegrees = -(90 * realOffset);
-    let angle = ((indicatorLength / 100) * 360) / 2 + offsetAngleDegrees; // static -> use dynamic offset later
+    let angle = ((indicatorLength / 100) * 360) / 2 + offsetAngleDegrees;
     return angle * (Math.PI / 180);
   };
 
@@ -66,7 +65,7 @@ const IndicatorComponent = (props) => {
                   width="4.5"
                   // Inaccurate solution to centering icon
                   x={`${
-                    15.91549430918954 * Math.cos(FindMiddleAngle(i)) + 18.85
+                    15.91549430918954 * Math.cos(FindMiddleAngle(i)) + 18.9
                   }`}
                   y={`${
                     15.91549430918954 * Math.sin(FindMiddleAngle(i)) + 18.5

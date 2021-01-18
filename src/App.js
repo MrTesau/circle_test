@@ -3,19 +3,19 @@ import CircleComponent from "./CircleComponent";
 import "./App.css";
 import SlidersComponent from "./SlidersComponent";
 
-function App() {
+const App = () => {
   const [text, setText] = useState("Circle Name");
   const [arc, setArc] = useState(140);
   const [radius, setRadius] = useState(75);
   const [data, setData] = useState([
-    "broken",
     "off",
     "on",
-    "off",
+    "broken",
     "on",
     "on",
     "on",
     "broken",
+    "off",
   ]);
   const circleProps = {
     text,
@@ -41,6 +41,6 @@ function App() {
       <SlidersComponent {...sliderProps} />
     </div>
   );
-}
+};
 
 export default App;
