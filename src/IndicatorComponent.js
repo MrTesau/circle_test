@@ -1,3 +1,4 @@
+import React from "react";
 import x from "./assets/x.png";
 
 const IndicatorComponent = (props) => {
@@ -25,7 +26,7 @@ const IndicatorComponent = (props) => {
         ></circle>
         {indicators.map((indicator, i) => {
           return (
-            <>
+            <React.Fragment key={i}>
               <circle
                 pointerEvents="stroke" // Make sure correct circle triggers events
                 className="svg-indicator"
@@ -74,7 +75,7 @@ const IndicatorComponent = (props) => {
               ) : (
                 ""
               )}
-            </>
+            </React.Fragment>
           );
         })}
       </svg>
