@@ -1,5 +1,4 @@
 import React from "react";
-import { PieChart } from "react-minimal-pie-chart";
 import Heading from "./curvedText.js";
 import Arrow from "./assets/arrow";
 import Magnifier from "./assets/magnifier";
