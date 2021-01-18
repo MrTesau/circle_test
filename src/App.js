@@ -8,14 +8,14 @@ function App() {
   const [arc, setArc] = useState(140);
   const [radius, setRadius] = useState(75);
   const [data, setData] = useState([
-    { title: "", value: 12.5, color: "#b7c6ce" },
-    { title: "", value: 12.5, color: "#b7c6ce" },
-    { title: "", value: 12.5, color: "#657e94" },
-    { title: "", value: 12.5, color: "#657e94" },
-    { title: "", value: 12.5, color: "#c53030" },
-    { title: "", value: 12.5, color: "#c53030" },
-    { title: "", value: 12.5, color: "#b7c6ce" },
-    { title: "", value: 12.5, color: "#b7c6ce" },
+    "broken",
+    "off",
+    "on",
+    "off",
+    "on",
+    "on",
+    "on",
+    "broken",
   ]);
   const circleProps = {
     text,

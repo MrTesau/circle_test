@@ -3,31 +3,17 @@ import { PieChart } from "react-minimal-pie-chart";
 import Heading from "./curvedText.js";
 import Arrow from "./assets/arrow";
 import Magnifier from "./assets/magnifier";
+import IndicatorComponent from "./IndicatorComponent";
+import "./App.css";
 
 const CircleComponent = (props) => {
+  const [color, setColor] = React.useState("black");
+
   const { text, arc, radius, data, setData } = props;
 
   return (
     <div className="circle">
-      <div style={{ position: "absolute" }}>
-        <PieChart
-          data={data}
-          lineWidth={10}
-          paddingAngle={2}
-          radius={45}
-          startAngle={0}
-          onClick={(e, segmentIndex) => {
-            let previousData = [...data];
-            previousData[segmentIndex].color =
-              previousData[segmentIndex].color === "#c53030"
-                ? "#657e94"
-                : previousData[segmentIndex].color === "#657e94"
-                ? "#b7c6ce"
-                : "#c53030";
-            return setData(previousData);
-          }}
-        />
-      </div>
+      <IndicatorComponent indicators={data} setIndicators={setData} />
       <div className="circle-inner">
         <div className="circle-inner-segmented">
           <Heading text={text} arc={arc} radius={radius} />
@@ -47,3 +33,37 @@ const CircleComponent = (props) => {
 };
 
 export default CircleComponent;
+
+/*
+    {/*
+        <circle
+          r="5"
+          cx="10"
+          cy="10"
+          fill="red"
+          stroke={color}
+          strokeWidth="1"
+          // size, gap
+          strokeDasharray="1 31.42"
+          //  size = circumference / number of indicators
+          transform="rotate(-90) translate(-20)"
+          // Add a mask circle over at the end to allow only click on borders
+          onClick={() => setColor("red")}
+        />
+
+        <circle
+          // dash offset = gaps and multiple circles
+          r="5"
+          cx="10"
+          cy="10"
+          fill="red"
+          stroke="black"
+          strokeWidth="1"
+          // size, gap
+          strokeDasharray="1 31.42"
+          //  size = circumference / number of indicators
+          transform="rotate(-90) translate(-30)"
+        />
+       
+
+        */

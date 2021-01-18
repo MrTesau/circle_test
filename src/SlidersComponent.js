@@ -3,16 +3,7 @@ import Slider from "@material-ui/core/Slider";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-const mockData = [
-  { title: "", value: 12.5, color: "#b7c6ce" },
-  { title: "", value: 12.5, color: "#b7c6ce" },
-  { title: "", value: 12.5, color: "#657e94" },
-  { title: "", value: 12.5, color: "#657e94" },
-  { title: "", value: 12.5, color: "#c53030" },
-  { title: "", value: 12.5, color: "#c53030" },
-  { title: "", value: 12.5, color: "#b7c6ce" },
-  { title: "", value: 12.5, color: "#b7c6ce" },
-];
+const mockData = [["on", "off", "on", "off", "on", "off", "on", "off"]];
 const useStyles = makeStyles({
   root: {
     width: 200,
@@ -27,24 +18,22 @@ const SlidersComponent = (props) => {
   const classes = useStyles();
   const [name, setName] = useState("");
   const { arc, setArc, radius, setRadius, setText, data, setData } = props;
+
   const arcChange = (event, newValue) => {
     setArc(newValue);
   };
   const radiusChange = (event, newValue) => {
     setRadius(newValue);
   };
-  const handleChange = (e) => {
-    setName(e.target.value);
-  };
   const indicatorChange = (event, newValue) => {
-    let dataObj = data[0];
     let newData = [];
     for (let i = 0; i < newValue; i++) {
-      let newObj = { ...dataObj };
-      newObj.color = Math.random() > 0.5 ? "#b7c6ce" : "#657e94";
-      newData.push(newObj);
+      newData.push(Math.random() > 0.5 ? "on" : "off");
     }
     setData(newData);
+  };
+  const handleChange = (e) => {
+    setName(e.target.value);
   };
   useEffect(() => {
     if (name.length) {
@@ -67,8 +56,8 @@ const SlidersComponent = (props) => {
 
       <Slider
         value={data.length}
-        step={1}
-        min={1}
+        step={2}
+        min={2}
         max={8}
         onChange={indicatorChange}
       />
