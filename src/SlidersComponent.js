@@ -28,7 +28,9 @@ const SlidersComponent = (props) => {
   const indicatorChange = (event, newValue) => {
     let newData = [];
     for (let i = 0; i < newValue; i++) {
-      newData.push(Math.random() > 0.5 ? "on" : "off");
+      newData.push(
+        Math.random() > 0.66 ? "on" : Math.random() > 0.33 ? "off" : "broken"
+      );
     }
     setData(newData);
   };
@@ -38,6 +40,8 @@ const SlidersComponent = (props) => {
   useEffect(() => {
     if (name.length) {
       setText(name);
+    } else {
+      setText("Circle Name");
     }
   }, [name, setText]);
   return (
