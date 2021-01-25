@@ -8,6 +8,7 @@ import "./App.css";
 const CircleComponent = (props) => {
   const { text, arc, radius, data, setData } = props;
 
+  // Convert inner indicator to svg shapes : Allow hover increase in size effect
   return (
     <div className="circle">
       <IndicatorComponent indicators={data} setIndicators={setData} />
