@@ -7,24 +7,43 @@ const mockData = ["off", "on", "broken", "on", "on", "on", "broken", "off"];
 const useStyles = makeStyles({
   root: {
     width: 200,
-    marginTop: "4rem",
+    marginTop: "3rem",
     fontFamily: "cursive",
-    fontSize: "0.99rem",
+    fontSize: "0.85rem",
     color: "antiquewhite",
+    letterSpacing: "1px",
   },
 });
 
 const SlidersComponent = (props) => {
   const classes = useStyles();
   const [name, setName] = useState("");
-  const { arc, setArc, radius, setRadius, setText, data, setData } = props;
-
+  const {
+    arc,
+    setArc,
+    radius,
+    setRadius,
+    setText,
+    data,
+    setData,
+    arcTransform,
+    setArcTransform,
+    //viewBoxSize,
+    // setViewBoxSize,
+  } = props;
+  // Text Arc slider
   const arcChange = (event, newValue) => {
     setArc(newValue);
   };
+  // Text Radius slider
   const radiusChange = (event, newValue) => {
     setRadius(newValue);
   };
+  // Text start Angle slider
+  const angleChange = (event, newValue) => {
+    setArcTransform(newValue);
+  };
+  // No. Of Indicators
   const indicatorChange = (event, newValue) => {
     let newData = [];
     for (let i = 0; i < newValue; i++) {
@@ -37,6 +56,7 @@ const SlidersComponent = (props) => {
   const handleChange = (e) => {
     setName(e.target.value);
   };
+  // Circle Name Change
   useEffect(() => {
     if (name.length) {
       setText(name);
@@ -56,6 +76,14 @@ const SlidersComponent = (props) => {
         max={100}
         onChange={radiusChange}
       />
+      <div>Modify Name Position Angle</div>
+      <Slider
+        value={arcTransform}
+        step={0.1}
+        min={0}
+        max={10}
+        onChange={angleChange}
+      />
       <div>Change Number of Indicators</div>
 
       <Slider
@@ -71,7 +99,11 @@ const SlidersComponent = (props) => {
           id="standard-basic"
           label="Name Circle"
           InputLabelProps={{
-            style: { color: "#fff", fontFamily: "cursive" },
+            style: {
+              color: "#fff",
+              fontFamily: "cursive",
+              fontSize: "0.85rem",
+            },
           }}
           name="name"
           onChange={(e) => handleChange(e)}
@@ -99,3 +131,18 @@ const SlidersComponent = (props) => {
 };
 
 export default SlidersComponent;
+// Size of Circle Slider
+/*
+    const sizeChange = (event, newValue) => {
+      setArc(newValue);
+        <div>Change Circle Size</div>
+   
+    };
+       <Slider
+         value={viewBoxSize}
+         step={2}
+         min={2}
+         max={84}
+         onChange={sizeChange}
+       />;
+  */

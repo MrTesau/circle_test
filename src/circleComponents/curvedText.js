@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function Heading({ text, arc, radius }) {
+function Heading({ text, arc, radius, arcTransform }) {
   const characters = text.split("");
   const degree = arc / characters.length;
 
@@ -12,7 +12,7 @@ function Heading({ text, arc, radius }) {
           key={`heading-span-${i}`}
           style={{
             height: `${radius}px`,
-            transform: `rotate(${degree * i - arc / 2}deg)`,
+            transform: `rotate(${degree * i - arc / arcTransform}deg)`,
             transformOrigin: `0 ${radius}px 0`,
           }}
         >

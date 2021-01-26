@@ -1,20 +1,28 @@
 import React from "react";
-import Heading from "./curvedText.js";
-import Arrow from "./assets/arrow";
-import Magnifier from "./assets/magnifier";
-import IndicatorComponent from "./IndicatorComponent";
-import "./App.css";
+import Heading from "../circleComponents/curvedText.js";
+import Arrow from "../assets/arrow";
+import Magnifier from "../assets/magnifier";
+import IndicatorComponent from "../circleComponents/IndicatorComponent";
 
 const CircleComponent = (props) => {
-  const { text, arc, radius, data, setData } = props;
-
-  // Convert inner indicator to svg shapes : Allow hover increase in size effect
+  const { text, arc, radius, arcTransform, data, setData } = props;
   return (
-    <div className="circle">
+    <div
+      className="circle"
+      style={{
+        width: "14.75rem",
+        height: "14.75rem",
+      }}
+    >
       <IndicatorComponent indicators={data} setIndicators={setData} />
       <div className="circle-inner">
         <div className="circle-inner-segmented">
-          <Heading text={text} arc={arc} radius={radius} />
+          <Heading
+            text={text}
+            arc={arc}
+            radius={radius}
+            arcTransform={arcTransform}
+          />
           <div className="circle-center"></div>
           <div className="svg-arrow">
             <Arrow />

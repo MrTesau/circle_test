@@ -1,8 +1,8 @@
 import React from "react";
-import x from "./assets/x.png";
+import x from "../assets/x.png";
 
 const IndicatorComponent = (props) => {
-  const { indicators, setIndicators } = props;
+  const { indicators, setIndicators, viewBoxSize, indicatorPos } = props;
   const indicatorLength = 100 / indicators.length - 0.6;
 
   const FindMiddleAngle = (i) => {
@@ -13,10 +13,36 @@ const IndicatorComponent = (props) => {
     let angle = ((indicatorLength / 100) * 360) / 2 + offsetAngleDegrees;
     return angle * (Math.PI / 180);
   };
+  const placeXIcon = (indicator, i) => {
+    if (indicator === "broken") {
+      return (
+        <image
+          href={x}
+          height="4.5"
+          width="4.5"
+          // Inaccurate solution to centering icon
+          x={`${15.91549430918954 * Math.cos(FindMiddleAngle(i)) + 18.9}`}
+          y={`${15.91549430918954 * Math.sin(FindMiddleAngle(i)) + 18.5}`}
+        />
+      );
+    }
+  };
 
   return (
-    <div style={{ position: "absolute", width: "17rem", height: "17rem" }}>
-      <svg width="100%" height="100%" viewBox="0 0 42 42">
+    <div
+      style={{
+        position: "absolute",
+        width: `${indicatorPos ? indicatorPos : 17}rem`,
+        height: `${indicatorPos ? indicatorPos : 17}rem`,
+      }}
+    >
+      <svg
+        width="100%"
+        height="100%"
+        viewBox={`0 0 ${viewBoxSize ? viewBoxSize : 42} ${
+          viewBoxSize ? viewBoxSize : 42
+        }`}
+      >
         <circle
           cx="21"
           cy="21"
@@ -59,22 +85,7 @@ const IndicatorComponent = (props) => {
                   setIndicators(indicatorArr);
                 }}
               ></circle>
-              {indicator === "broken" ? (
-                <image
-                  href={x}
-                  height="4.5"
-                  width="4.5"
-                  // Inaccurate solution to centering icon
-                  x={`${
-                    15.91549430918954 * Math.cos(FindMiddleAngle(i)) + 18.9
-                  }`}
-                  y={`${
-                    15.91549430918954 * Math.sin(FindMiddleAngle(i)) + 18.5
-                  }`}
-                />
-              ) : (
-                ""
-              )}
+              {placeXIcon(indicator, i)}
             </React.Fragment>
           );
         })}
