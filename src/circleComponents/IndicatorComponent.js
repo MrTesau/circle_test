@@ -43,13 +43,14 @@ const IndicatorComponent = (props) => {
           viewBoxSize ? viewBoxSize : 42
         }`}
       >
+        {/*
         <circle
           cx="21"
           cy="21"
           fill="transparent"
-          r="15.91549430918954"
+          r="15.91549430918954" 
           stroke="rgba(132, 171, 190, 1)"
-        ></circle>
+        ></circle> */}
         {indicators.map((indicator, i) => {
           return (
             <React.Fragment key={i}>

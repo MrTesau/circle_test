@@ -1,10 +1,10 @@
-import React from "react";
-import HeadingText from "./curvedText.js";
+//import React from "react";
+//import HeadingText from "./curvedText.js";
 //import Arrow from "../assets/arrow";
 //import Magnifier from "../assets/magnifier";
-import IndicatorComponent from "./IndicatorComponent";
-import InnerCircle from "./innerSegmentedCircle";
-
+//import IndicatorComponent from "./IndicatorComponent";
+//import InnerCircle from "./innerSegmentedCircle";
+/*
 const CircleComponent = (props) => {
   const {
     text,
@@ -18,15 +18,16 @@ const CircleComponent = (props) => {
     innerCircleDimensions,
     indicatorPos,
   } = props;
-
+  // Converting DIV wrapper to SVG would help scaling functionality?
   return (
     <div
-      className="circle"
+      className="circle-opacity"
       style={{
         width: `${circleDimensions}rem`,
         height: `${circleDimensions}rem`,
       }}
     >
+      {/*
       <InnerCircle viewBoxSize={viewBoxSize} />
       <IndicatorComponent
         indicators={data}
@@ -48,8 +49,8 @@ const CircleComponent = (props) => {
           arcTransform={arcTransform}
         />
       </div>
+      
     </div>
   );
 };
-
-export default CircleComponent;
+export default CircleComponent; */

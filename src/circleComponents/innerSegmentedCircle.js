@@ -78,7 +78,6 @@ const IndicatorComponent = (props) => {
           strokeDasharray="calc(25 * 31.42 / 100) calc(75 * 31.42 / 100)"
           strokeDashoffset="23.60"
         />
-
         {/* vertical divider */}
         <rect
           x="20.5"
