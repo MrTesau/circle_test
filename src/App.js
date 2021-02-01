@@ -38,8 +38,9 @@ const App = () => {
   const [innerSegmentOpacity, setInnerSegmentOpacity] = useState(0.25);
   const [outerCircleOpacity, setOuterCircleOpacity] = useState(0.37);
 
+  // Scale outer CSS dimension to SVG viewBox
+  // For use in Hover Effects: Not currently implemented
   React.useEffect(() => {
-    // Scale outer CSS dimension to SVG viewBox
     let newCircle = 14.75 * (1 / (viewBoxSize / 42));
     let newInnerCircle = 10 * (1 / (viewBoxSize / 42));
     let newIndicatorPos = 17 * (1 / (viewBoxSize / 42));
@@ -79,7 +80,6 @@ const App = () => {
     viewBoxSize,
     setViewBoxSize,
   };
-
   return (
     <div
       className="container"
