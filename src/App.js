@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-//import CircleComponent from "./circleComponents/CircleComponent";
-import CssCircle from "./circleCSS/circleCSS";
-//import SlidersComponent from "./circleComponents/SlidersComponent";
-import OpacitySliders from "./circleCSS/OpacitySliders";
+import CssCircle from "./components/css-circle";
+import OpacitySliders from "./components/sliders/OpacitySliders";
 import "./App.css";
 
 const App = () => {
@@ -116,8 +114,7 @@ const App = () => {
 };
 
 export default App;
-
-/* Code that Needs to be Re-Introduced:
+/* Code that Needs to be Re-Introduced (Work in Progress)
   /*
       <div
         style={{
@@ -140,18 +137,9 @@ export default App;
         <CircleComponent {...circleProps} />
         {/* <SlidersComponent {...sliderProps} />
       </div>
-
-
-
        <div
           style={{ margin: "1rem", fontFamily: "cursive", fontSize: "0.85rem" }}
         >
           CSS Styled Circle
         </div>
-
-
-
- 
-
-
      */

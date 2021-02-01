@@ -1,0 +1,133 @@
+.circle {
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*
+  box-shadow: 0.25em 0.25em 0.75em rgba(33, 85, 132, 0.9),
+    0.125em 0.125em 0.95em rgba(33, 85, 132, 0.9);*/
+  position: relative;
+}
+.circle-opacity {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.5);
+  position: relative;
+  width: 14.75rem;
+  height: 14.75rem;
+}
+.circle-inner {
+  width: 11rem;
+  height: 11rem;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle-inner-segmented-canvas {
+  width: 10rem;
+  height: 10rem;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.circle-inner-segmented {
+  width: 10rem;
+  height: 10rem;
+  /*background: rgba(100, 155, 187, 0.9);*/
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle-center {
+  width: 4rem;
+  height: 4rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  /*background: rgba(42, 118, 162, 1);*/
+  border-radius: 50%;
+  /* position: absolute;
+  top: 3rem;
+  left: 3rem;*/
+}
+.inner-vertical-divider {
+  width: 0.36rem;
+  height: 5rem;
+  /* background: rgba(42, 118, 162, 1);*/
+  position: absolute;
+  left: 4.82rem;
+  top: 5rem;
+}
+.inner-horizontal-divider {
+  width: 10rem;
+  height: 0.36rem;
+  /*background: rgba(42, 118, 162, 1);*/
+  position: absolute;
+  top: 4.82rem;
+}
+/* SVG Circle Wrapper */
+.circle-inner-segmented-svg {
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.svg-arrow {
+  position: absolute;
+  top: 6.5rem;
+  left: 6.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.svg-magnifier {
+  position: absolute;
+  top: 6.8rem;
+  left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+/* Curved Text Settings */
+p {
+  font-family: "Amatic SC", cursive;
+  font-size: 0.9rem;
+  color: antiquewhite;
+  text-align: center;
+  position: absolute;
+  left: 5rem;
+  top: 1rem;
+  -webkit-transform: translate(-50%, calc(-50% -1rem));
+  -ms-transform: translate(-50%, calc(-50% - 1rem));
+  transform: translate(-50%, calc(-50% - 1rem));
+}
+p span {
+  position: absolute;
+}
+
+/* SVG Section Hover - Needs Work
+.section {
+  pointer-events: all;
+}
+.section:hover {
+  fill: green;
+  transform: scale(2.5);
+}
+.section-join {
+  transition: all 1s;
+  transform-origin: 50% 50%;
+}
+*/

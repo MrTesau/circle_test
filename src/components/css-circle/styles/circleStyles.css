@@ -1,0 +1,76 @@
+.outer-circle {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.5);
+  position: relative;
+  width: 14.75rem;
+  height: 14.75rem;
+}
+.inner-circle {
+  width: 11rem;
+  height: 11rem;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner-circle-segmented {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle-center {
+  width: 4rem;
+  height: 4rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+/* Dividers */
+.inner-vertical-divider {
+  width: 0.36rem;
+  height: 5rem;
+  position: absolute;
+  left: 4.82rem;
+  top: 5rem;
+}
+.inner-horizontal-divider {
+  width: 10rem;
+  height: 0.36rem;
+  position: absolute;
+  top: 4.82rem;
+}
+/* SVG Circle Wrapper */
+.circle-inner-segmented-svg {
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.svg-arrow {
+  position: absolute;
+  top: 6.5rem;
+  left: 6.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.svg-magnifier {
+  position: absolute;
+  top: 6.8rem;
+  left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}

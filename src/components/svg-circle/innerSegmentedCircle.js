@@ -1,6 +1,6 @@
 import React from "react";
-import Arrow from "../assets/arrow";
-import Magnifier from "../assets/magnifier";
+import Arrow from "../../arrow";
+import Magnifier from "../../magnifier";
 
 const IndicatorComponent = (props) => {
   const { viewBoxSize } = props;

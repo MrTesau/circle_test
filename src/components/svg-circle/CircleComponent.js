@@ -1,10 +1,10 @@
-//import React from "react";
-//import HeadingText from "./curvedText.js";
+import React from "react";
+import HeadingText from "./curvedText.js";
 //import Arrow from "../assets/arrow";
 //import Magnifier from "../assets/magnifier";
-//import IndicatorComponent from "./IndicatorComponent";
-//import InnerCircle from "./innerSegmentedCircle";
-/*
+import IndicatorComponent from "./IndicatorComponent";
+import InnerCircle from "./innerSegmentedCircle";
+
 const CircleComponent = (props) => {
   const {
     text,
@@ -49,8 +49,9 @@ const CircleComponent = (props) => {
           arcTransform={arcTransform}
         />
       </div>
-      
+      */}
     </div>
   );
 };
-export default CircleComponent; */
+
+export default CircleComponent;

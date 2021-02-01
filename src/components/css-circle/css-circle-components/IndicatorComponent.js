@@ -1,5 +1,5 @@
 import React from "react";
-import x from "../assets/x.png";
+import x from "../../../assets/x.png";
 
 const IndicatorComponent = (props) => {
   const { indicators, setIndicators, viewBoxSize, indicatorPos } = props;
