@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import CssCircle from "./components/css-circle";
+import SvgCircle from "./components/svg-circle";
 import OpacitySliders from "./components/sliders/OpacitySliders";
+import SlidersComponent from "./components/sliders/SlidersComponent";
 import "./App.css";
 
 const App = () => {
@@ -92,28 +94,70 @@ const App = () => {
       <div
         style={{
           display: "flex",
+          flexWrap: "wrap",
           justifyContent: "center",
-          flexDirection: "column",
-          alignItems: "center",
-          //marginLeft: "5rem",
+          alignItems: "flex-start",
           color: "antiquewhite",
         }}
       >
-        <CssCircle {...circleProps} />
-        <OpacitySliders
-          outerCircleOpacity={outerCircleOpacity}
-          setOuterCircleOpacity={setOuterCircleOpacity}
-          innerSegmentOpacity={innerSegmentOpacity}
-          setInnerSegmentOpacity={setInnerSegmentOpacity}
-          currentBackgound={currentBackground}
-          setCurrentBackground={setCurrentBackground}
-        />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "flex-start",
+            alignItems: "center",
+            margin: "1rem  3rem",
+          }}
+        >
+          <CssCircle {...circleProps} />
+          <div
+            style={{
+              margin: "1rem",
+              fontFamily: "cursive",
+              fontSize: "0.85rem",
+              color: "antiquewhite",
+            }}
+          >
+            CSS Circle
+          </div>
+          <OpacitySliders
+            outerCircleOpacity={outerCircleOpacity}
+            setOuterCircleOpacity={setOuterCircleOpacity}
+            innerSegmentOpacity={innerSegmentOpacity}
+            setInnerSegmentOpacity={setInnerSegmentOpacity}
+            currentBackgound={currentBackground}
+            setCurrentBackground={setCurrentBackground}
+          />
+        </div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "flex-start",
+            margin: "1rem 3rem",
+          }}
+        >
+          <SvgCircle {...circleProps} />
+          <div
+            style={{
+              margin: "1rem",
+              fontFamily: "cursive",
+              fontSize: "0.85rem",
+              color: "antiquewhite",
+            }}
+          >
+            SVG Test Circle
+          </div>
+          <SlidersComponent {...sliderProps} />
+        </div>
       </div>
     </div>
   );
 };
 
 export default App;
+
 /* Code that Needs to be Re-Introduced (Work in Progress)
   /*
       <div

@@ -12,6 +12,11 @@ const useStyles = makeStyles({
     fontSize: "0.85rem",
     color: "antiquewhite",
     letterSpacing: "1px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
   },
 });
 
@@ -94,21 +99,7 @@ const SlidersComponent = (props) => {
         onChange={indicatorChange}
       />
       <div>Click Indicator to Change it's State!</div>
-      <div style={{ marginTop: "1rem" }}>
-        <TextField
-          id="standard-basic"
-          label="Name Circle"
-          InputLabelProps={{
-            style: {
-              color: "#fff",
-              fontFamily: "cursive",
-              fontSize: "0.85rem",
-            },
-          }}
-          name="name"
-          onChange={(e) => handleChange(e)}
-        />
-      </div>
+
       <div style={{ marginTop: "1rem" }}>
         <Button
           size="small"
@@ -133,6 +124,22 @@ const SlidersComponent = (props) => {
 export default SlidersComponent;
 // Size of Circle Slider
 /*
+     <div style={{ marginTop: "1rem" }}>
+       <TextField
+         id="standard-basic"
+         label="Name Circle"
+         InputLabelProps={{
+           style: {
+             color: "#fff",
+             fontFamily: "cursive",
+             fontSize: "0.85rem",
+           },
+         }}
+         name="name"
+         onChange={(e) => handleChange(e)}
+       />
+     </div>;
+
     const sizeChange = (event, newValue) => {
       setArc(newValue);
         <div>Change Circle Size</div>

@@ -11,6 +11,11 @@ const useStyles = makeStyles({
     fontSize: "0.85rem",
     color: "antiquewhite",
     letterSpacing: "1px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
   },
 });
 

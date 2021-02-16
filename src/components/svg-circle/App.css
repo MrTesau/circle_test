@@ -18,6 +18,7 @@
   position: relative;
   width: 14.75rem;
   height: 14.75rem;
+  background-color: rgba(255, 255, 255, 0.37);
 }
 .circle-inner {
   width: 11rem;

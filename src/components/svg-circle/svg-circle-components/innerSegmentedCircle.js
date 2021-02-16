@@ -1,6 +1,6 @@
 import React from "react";
-import Arrow from "../../arrow";
-import Magnifier from "../../magnifier";
+import Arrow from "../../../assets/arrow";
+import Magnifier from "../../../assets/magnifier";
 
 const IndicatorComponent = (props) => {
   const { viewBoxSize } = props;
@@ -9,8 +9,8 @@ const IndicatorComponent = (props) => {
       <div
         style={{
           position: "absolute",
-          top: "62%",
-          left: "62%",
+          top: "60.5%",
+          left: "63%",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
